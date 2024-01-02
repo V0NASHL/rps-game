@@ -1,18 +1,14 @@
 const options = ["rock", "paper", "scissors"];
 
-function getPlayerChoice(){
-    let validatedInput = false;
-    while(validatedInput == false){
-        const choice = prompt("Rock Paper Scissors");
-        if(choice == null){
-            continue;
-        }
-        const choiceInLower = choice.toLowerCase();
-        if(options.includes(choiceInLower)){
-            validatedInput = true;
-            return choiceInLower;
-        }
-    }
+function startGame(){
+    let choice = document.querySelectorAll("button");
+    choice.forEach((button) => {
+        button.addEventListener("click", () => {
+            if (button.id) {
+                game(button.id)
+            }
+        })
+    });
 }
 
 function getComputerChoice(){
@@ -49,20 +45,21 @@ function playRound(playerSelection,computerSelection){
     }
 }
 
-function game(){
+function game(playerSelection){
     let scorePlayer = 0;
     let scoreComputer = 0;
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        if(checkWinner(playerSelection, computerSelection) == "Player"){
-            scorePlayer++;
-        }
-        else if(checkWinner(playerSelection, computerSelection) == "Computer"){
-            scoreComputer++;
-        }
+    
+    const computerSelection = getComputerChoice();
+    
+    console.log(playRound(playerSelection, computerSelection));
+        
+    if(checkWinner(playerSelection, computerSelection) == "Player"){
+        scorePlayer++;
     }
+    else if(checkWinner(playerSelection, computerSelection) == "Computer"){
+        scoreComputer++;
+    }
+
     console.log("Game Over")
     if(scorePlayer > scoreComputer){
         console.log("Player Wins!");
@@ -75,4 +72,4 @@ function game(){
     }
 }
 
-game()
+startGame()
