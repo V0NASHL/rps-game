@@ -1,0 +1,18 @@
+body{
+    background-color: #e5decf;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.choice{
+    cursor: pointer;
+}
+
+.choice:hover{
+    transform: scale(1.10);
+}
