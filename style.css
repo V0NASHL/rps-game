@@ -1,5 +1,8 @@
 body{
     background-color: #e5decf;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .buttons{
@@ -9,10 +12,37 @@ body{
     width: 800px;
 }
 
+.selection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .choice{
     cursor: pointer;
 }
 
 .choice:hover{
     transform: scale(1.10);
+}
+
+.scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.num{
+    font-size: 75px;
+}
+
+h1{
+    margin: 5px;
 }
