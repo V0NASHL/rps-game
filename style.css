@@ -3,6 +3,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 150px;
 }
 
 .buttons{
@@ -45,4 +46,19 @@ body{
 
 h1{
     margin: 5px;
+}
+
+.player{
+    color: blue;
+}
+
+.computer{
+    color: red;
+}
+
+.hands{
+    display: flex;
+    flex-direction: row;
+    width: 1100px;
+    justify-content: space-around;
 }
