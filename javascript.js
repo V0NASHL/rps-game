@@ -1,11 +1,11 @@
 const options = ["rock", "paper", "scissors"];
 
 function startGame(){
-    let choice = document.querySelectorAll("button");
-    choice.forEach((button) => {
-        button.addEventListener("click", () => {
-            if (button.id) {
-                game(button.id)
+    let choice = document.querySelectorAll("img");
+    choice.forEach((img) => {
+        img.addEventListener("click", () => {
+            if (img.id) {
+                game(img.id)
             }
         })
     });
