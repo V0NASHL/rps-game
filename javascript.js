@@ -11,6 +11,11 @@ function startGame(){
     });
 }
 
+function changeImage(fileName){
+    let img = document.querySelector("#pChoice");
+    img.setAttribute("src", fileName)
+}
+
 function getComputerChoice(){
     const choice = options[Math.floor(Math.random() * options.length)];
     return choice;
