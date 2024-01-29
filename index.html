@@ -10,8 +10,8 @@
 <body>
 
  <div class="scores">
-    <div class="player"><div class="score"><h1>Player</h1><div class="num"><h1>0</h1></div></div></div>
-    <div class="computer"><div class="score"><h1>Computer</h1><div class="num"><h1>0</h1></div></div></div>
+    <div class="player"><div class="score"><h1>Player</h1><div class="num"><h1 id="pScore">0</h1></div></div></div>
+    <div class="computer"><div class="score"><h1>Computer</h1><div class="num"><h1 id="cScore">0</h1></div></div></div>
  </div>
 
  <div class="hands">
@@ -22,9 +22,9 @@
  <h2 style="font-size: 45px;">Make Your Choice</h2>
   
  <div class="buttons"> 
-    <div onclick="changeImage('images/p_rock.png')" class="selection"><img class="choice" src="images/rock.png" width="170" height="170" alt="Rock" id="rock"><h2>ROCK</h2></div>
-    <div onclick="changeImage('images/p_paper.png')" class="selection"><img class="choice" src="images/paper.png" width="170" height="170" alt="Paper" id="paper"><h2>PAPER</h2></div>
-    <div onclick="changeImage('images/p_scissors.png')" class="selection"><img class="choice" src="images/scissors.png" width="170" height="170" alt="Scissors" id="scissors"><h2>SCISSORS</h2></div>
+    <div id="button" onclick="changeImage('images/p_rock.png')" class="selection"><img class="choice" src="images/rock.png" width="170" height="170" alt="Rock" id="rock"><h2>ROCK</h2></div>
+    <div id="button" onclick="changeImage('images/p_paper.png')" class="selection"><img class="choice" src="images/paper.png" width="170" height="170" alt="Paper" id="paper"><h2>PAPER</h2></div>
+    <div id="button" onclick="changeImage('images/p_scissors.png')" class="selection"><img class="choice" src="images/scissors.png" width="170" height="170" alt="Scissors" id="scissors"><h2>SCISSORS</h2></div>
  </div>
 
 </body>

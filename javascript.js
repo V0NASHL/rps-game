@@ -1,5 +1,8 @@
 const options = ["rock", "paper", "scissors"];
 
+let scorePlayer = 0;
+let scoreComputer = 0;
+
 function startGame(){
     let choice = document.querySelectorAll("img");
     choice.forEach((img) => {
@@ -50,30 +53,42 @@ function playRound(playerSelection,computerSelection){
     }
 }
 
+function endGame(){
+    if (scorePlayer > scoreComputer){
+        console.log("You Win!");
+    }
+    else if (scoreComputer > scorePlayer){
+        console.log("Computer Wins...")
+    }
+}
+
 function game(playerSelection){
-    let scorePlayer = 0;
-    let scoreComputer = 0;
-    
+
     const computerSelection = getComputerChoice();
+
+    if (computerSelection == "rock"){
+        document.querySelector("#cChoice").src = "images/c_rock.png";
+    }
+    else if (computerSelection == "paper"){
+        document.querySelector("#cChoice").src = "images/c_paper.png";
+    }
+    else if (computerSelection == "scissors"){
+        document.querySelector("#cChoice").src = "images/c_scissors.png";
+    }
     
     console.log(playRound(playerSelection, computerSelection));
         
     if(checkWinner(playerSelection, computerSelection) == "Player"){
         scorePlayer++;
+        document.getElementById("pScore").innerText = scorePlayer;
     }
     else if(checkWinner(playerSelection, computerSelection) == "Computer"){
         scoreComputer++;
+        document.getElementById("cScore").innerText = scoreComputer;
     }
 
-    console.log("Game Over")
-    if(scorePlayer > scoreComputer){
-        console.log("Player Wins!");
-    }
-    else if(scorePlayer < scoreComputer){
-        console.log("Computer Wins!")
-    }
-    else{
-        console.log("It's a tie!")
+    if(scorePlayer === 5 || scoreComputer === 5){
+        endGame();
     }
 }
 
