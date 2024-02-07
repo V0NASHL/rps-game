@@ -19,13 +19,19 @@
    <div class="computerChoice"><img id="cChoice" src="images/c_rock.png"></div>
  </div>
 
- <h2 style="font-size: 45px;">Make Your Choice</h2>
+ <h2 id="result" style="font-size: 35px;"></h2>
+
+ <h2 id="displayText" style="font-size: 45px;">Make Your Choice</h2>
   
- <div class="buttons"> 
-    <div id="button" onclick="changeImage('images/p_rock.png')" class="selection"><img class="choice" src="images/rock.png" width="170" height="170" alt="Rock" id="rock"><h2>ROCK</h2></div>
-    <div id="button" onclick="changeImage('images/p_paper.png')" class="selection"><img class="choice" src="images/paper.png" width="170" height="170" alt="Paper" id="paper"><h2>PAPER</h2></div>
-    <div id="button" onclick="changeImage('images/p_scissors.png')" class="selection"><img class="choice" src="images/scissors.png" width="170" height="170" alt="Scissors" id="scissors"><h2>SCISSORS</h2></div>
+ <div id="button" class="buttons"> 
+    <div onclick="changeImage('images/p_rock.png')" class="selection"><img class="choice" src="images/rock.png" width="170" height="170" alt="Rock" id="Rock"><h2>ROCK</h2></div>
+    <div onclick="changeImage('images/p_paper.png')" class="selection"><img class="choice" src="images/paper.png" width="170" height="170" alt="Paper" id="Paper"><h2>PAPER</h2></div>
+    <div onclick="changeImage('images/p_scissors.png')" class="selection"><img class="choice" src="images/scissors.png" width="170" height="170" alt="Scissors" id="Scissors"><h2>SCISSORS</h2></div>
  </div>
+
+ <h1 id="finalResult" style="font-size: 80px;"></h1>
+
+ <div><button class="retry" id="reset" onclick="resetGame()">Play Again?</button></div>
 
 </body>
 </html>
